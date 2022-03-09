@@ -1,14 +1,24 @@
 // import models
 const User = require('./User');
+const GuestList = require('./GuestList');
+// waiting for the codes for Food model(table)
+const Food = require('./Food');
 
 // Associations here
-// hasOne
-//belongsTo
-//If hasMany
-//if through
 
+GuestList.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+
+User.hasMany(GuestList, {
+    foreignKey: 'user_id'
+})
+
+Food.belongsToMany(GuestList, {
+    foreignKey: 'food_id'
+})
 
 
 module.exports = {
-  User,
+  User, GuestList, Food
 };
