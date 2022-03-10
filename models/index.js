@@ -14,8 +14,8 @@ User.hasMany(GuestList, {
     foreignKey: 'user_id'
 })
 
-Food.belongsToMany(GuestList, {
-    foreignKey: 'food_id'
+Food.belongsTo(GuestList, {
+    foreignKey: 'guest_id'
 })
 
 
