@@ -17,6 +17,7 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hjohnsick/the-guest-list.git"
