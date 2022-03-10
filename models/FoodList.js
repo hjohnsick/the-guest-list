@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const GuestList = require("./GuestList");
 
-class FoodList extends Model {}
+class Food extends Model {}
 
-FoodList.init(
+Food.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -14,15 +15,26 @@ FoodList.init(
 
         food: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
 
         guest_id:{
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: 
+            references: {
+                model: "guestList",
+                key: "id",
+            }
         }
-    }    
+    },  
+
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "guestList",
+    }  
 );
 
-module.exports = FoodList
+module.exports = Food;
