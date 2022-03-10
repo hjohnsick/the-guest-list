@@ -2,8 +2,14 @@ const express = require('express');
 const router = express.Router();
 const config = require('../config/connection');
 
-// Get all guests
-router.get('/')
+router.get('/', (req, res) => {
+    GuestList.findAll()
+
+});
+
+
+
+
 
 
 module.exports = router;
