@@ -1,7 +1,6 @@
 {
   "name": "the-guest-list",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +15,15 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjohnsick/the-guest-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hjohnsick/the-guest-list/issues"
+  },
+  "homepage": "https://github.com/hjohnsick/the-guest-list#readme",
+  "description": ""
 }
