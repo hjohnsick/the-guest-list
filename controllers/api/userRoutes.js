@@ -47,6 +47,8 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     // create a new user
     User.create({
+        user_first_name: req.body.first_name,
+        user_last_name: req.body.last_name,
         user_email: req.body.email,
         user_password: req.body.password
     })
@@ -58,10 +60,11 @@ router.post('/', (req, res) => {
   
 });
 
-
+//?????
 // trying to figure out if we want to update guestList 
 // associated with particular guest
-// update 
+//  or update only user info
+
 router.put('/:id', (req, res) => {
     // update product data
     User.update(req.body, {
