@@ -1,3 +1,4 @@
+
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
@@ -80,3 +81,5 @@ GuestList.init(
     modelName: "guestList",
   }
 );
+
+module.exports = GuestList;
