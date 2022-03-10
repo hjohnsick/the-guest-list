@@ -1,4 +1,3 @@
-
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
@@ -38,10 +37,6 @@ GuestList.init(
       validate: {
         len: [5],
       },
-    },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
     phone_number: {
       type: DataTypes.STRING,
