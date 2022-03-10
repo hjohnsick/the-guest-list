@@ -1,5 +1,3 @@
-// Copy everything from Heather
-// just added export at the bottom
 
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
