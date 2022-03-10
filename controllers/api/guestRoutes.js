@@ -29,7 +29,30 @@ router.get('/', (req, res) => {
     });
 });
 
-
+router.get('/:id', (req, res) => {
+    GuestList.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [
+            {
+                model: Food, 
+                attributes: ['food']
+            }
+        ]
+    })
+    .then((dbGuestData) => {
+        if(!dbGuestData) {
+            res.status(404).json({message: 'no guest found for this user'});
+            return;
+        }
+        res.json(dbGuestData);
+    })
+    .catch((error) => {
+        console.log(error);
+        res.status(500).json(error);
+    });
+});
 
 router.post('/', (req, res) => {
     GuestList.create({
