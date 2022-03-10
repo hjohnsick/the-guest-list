@@ -35,13 +35,7 @@ router.get('/:id', (req, res) => {
 
         ]
       })
-      .then(dbUserData => {
-          if(!dbUserData[0]) {
-              res.status(404).json({ message: "No user with this id"});
-              return;
-          }
-          res.json(dbUserData);
-      })
+      .then(dbUserData => dbUserData ? res.json(dbUserData) : res.json({message: 'User not found'}))
       .catch(err => {
           console.log(err);
           res.status(500).json(err);
@@ -65,6 +59,46 @@ router.post('/', (req, res) => {
 });
 
 
+// trying to figure out if we want to update guestList 
+// associated with particular guest
+// update 
+router.put('/:id', (req, res) => {
+    // update product data
+    User.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((user) => {
+        // find all associated guestList 
+        console.log(user);
+        return GuestList.findAll({ where: { user_id: req.params.id } });
+      })
+      .then((guestList) => {
+        //  stuck here
+        // trying to figure out both delete and update action
+        // how to catch data from req.body
+        //then update accordingly 
+      })
+      .catch((err) => {
+        // console.log(err);
+        res.status(400).json(err);
+      });
+  });
+
+router.delete('/:id', (req, res) => {
+    // delete one user by its `id` value
+    User.destroy({
+      where: {
+          id: req.params.id
+     }
+  })  
+  .then(dbUserData => dbUserData ? res.json(dbUserData) : res.json({message: 'User not found'}))
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+   });
+});
 
 
 
