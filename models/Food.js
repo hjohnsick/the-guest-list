@@ -16,15 +16,6 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-
-    guest_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "guestList",
-        key: "id",
-      },
-    },
   },
 
   {
