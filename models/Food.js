@@ -32,7 +32,7 @@ Food.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "guestList",
+    modelName: "food",
   }
 );
 
