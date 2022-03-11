@@ -2,17 +2,9 @@ const router = require('express').Router();
 const { User, GuestList, Food} = require('../../models');
 
 
-// getting all the users with the guestlist
+// getting all the users
 router.get('/', (req, res) => {
-    // find all users including its associated guestLists
-    User.findAll({
-        include: [
-            {
-                model: GuestList,
-                attributes: ['id', 'first_name', 'last_name', 'street', 'city', 'state', 'zipcode', 'phone_number', 'email', 'rsvp', 'user_id', 'food_id' ]
-            }
-          ]
-      })
+    User.findAll({ attributes: {exclude: ["password"] },})
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
         console.log(err);
@@ -22,18 +14,12 @@ router.get('/', (req, res) => {
 
 
 router.get('/:id', (req, res) => {
-    // find one user by its `id` value including its associated guestLists
+    // find one user by its `id` value 
     User.findOne({
         where: {
             id: req.params.id
         },
-        include: [
-            {
-                model: GuestList,
-                attributes: ['id', 'first_name', 'last_name', 'street', 'city', 'state', 'zipcode', 'phone_number', 'email', 'rsvp', 'user_id', 'food_id' ]
-            }
-
-        ]
+        attributes: {exclude: ["password"] },
       })
       .then(dbUserData => dbUserData ? res.json(dbUserData) : res.json({message: 'User not found'}))
       .catch(err => {
@@ -47,10 +33,10 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     // create a new user
     User.create({
-        user_first_name: req.body.first_name,
-        user_last_name: req.body.last_name,
-        user_email: req.body.email,
-        user_password: req.body.password
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -60,34 +46,21 @@ router.post('/', (req, res) => {
   
 });
 
-//?????
-// trying to figure out if we want to update guestList 
-// associated with particular guest
-//  or update only user info
+
+// update user info
 
 router.put('/:id', (req, res) => {
-    // update product data
     User.update(req.body, {
       where: {
-        id: req.params.id,
-      },
+        id: req.params.id
+      }
     })
-      .then((user) => {
-        // find all associated guestList 
-        console.log(user);
-        return GuestList.findAll({ where: { user_id: req.params.id } });
-      })
-      .then((guestList) => {
-        //  stuck here
-        // trying to figure out both delete and update action
-        // how to catch data from req.body
-        //then update accordingly 
-      })
-      .catch((err) => {
-        // console.log(err);
-        res.status(400).json(err);
-      });
-  });
+    .then(dbUserData => dbUserData ? res.json(dbUserData) : res.json({ message: "No user found with this id" }))
+    .catch(err => { 
+      console.log(err); 
+      res.status(500).json(err);
+    });
+});
 
 router.delete('/:id', (req, res) => {
     // delete one user by its `id` value
