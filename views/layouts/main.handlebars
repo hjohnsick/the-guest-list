@@ -32,11 +32,11 @@
                 List</a>
             </div>
             <div class="navbar-end">
-              <p><a
-                  href="#ex1"
-                  rel="modal:open"
-                  class="px-3 is-size-4 navbar-item"
-                >Sign Up</a></p>
+              <button
+                id="signup"
+                class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
+                data-target="modal-sign-up"
+              >Sign Up</button>
               <button
                 class="px-3 is-size-4 navbar-item btn-no-style"
               >Login</button>
@@ -52,59 +52,67 @@
       <main>
         {{{body}}}
       </main>
-      <div id="ex1" class="modal sign-up">
-        <h1 class="title">Sign Up</h1>
-        <form>
-          <div class="field">
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="text" placeholder="First Name" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-regular fa-user"></i>
-              </span>
-            </p>
-          </div>
-          <div class="field">
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="text" placeholder="Last Name" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-regular fa-user"></i>
-              </span>
-            </p>
-          </div>
-          <div class="field">
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="email" placeholder="Email" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-            </p>
-          </div>
-          <div class="field">
-            <p class="control has-icons-left">
-              <input class="input" type="password" placeholder="Password" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </p>
-          </div>
-        </form>
-        <a href="#" rel="modal:close"></a>
-        <input class="button is-primary" type="submit" value="Submit" />
-      </div>
-    </div>
-    <!-- Remember to include jQuery :) -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    ></script>
+      <!-- sign up modal start -->
+      <div id="modal-sign-up" class="modal">
+        <div class="modal-background"></div>
 
-    <!-- jQuery Modal -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
-    />
+        <div class="modal-content">
+          <div class="box">
+            <h1 class="title">Sign Up</h1>
+            <form>
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" type="text" placeholder="First Name" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-regular fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" type="text" placeholder="Last Name" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-regular fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" placeholder="Email" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="password" placeholder="Password" />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <input
+                id="submit-signup"
+                class="button is-primary"
+                type="submit"
+                value="Submit"
+              />
+            </form>
+          </div>
+
+        </div>
+
+        <button
+          id="modal-close"
+          class="modal-close is-large"
+          aria-label="close"
+        ></button>
+
+      </div>
+      <!-- modal sign up end -->
+    </div>
+    <script src="/javascript/index.js"></script>
   </body>
 
 </html>
