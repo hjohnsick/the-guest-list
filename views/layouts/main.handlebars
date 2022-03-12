@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Guest List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-menu is-active">
+            <div class="navbar-start">
+              <a class="is-size-3 navbar-item" href="/">The Guest List</a>
+            </div>
+            <div class="navbar-end">
+              <button class="px-3 is-size-4 navbar-item btn-no-style">Sign Up</button>
+              <button
+                class="px-3 is-size-4 navbar-item btn-no-style"
+              >Login</button>
+              <button
+                id="logout"
+                class="px-3 is-size-4 navbar-item btn-no-style"
+              >Logout
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
+  </body>
+
+</html>
