@@ -1,9 +1,20 @@
 .wrapper,
+.title,
 .btn-no-style {
   font-family: "Sacramento", cursive;
 }
 
-a {
+#modal-close {
+  top: 10px;
+  right: 10px;
+}
+
+a.navbar-item:hover {
+  background-color: #a4e5e0;
+  font-weight: bold;
+}
+
+#home-link {
   text-decoration: none;
 }
 
