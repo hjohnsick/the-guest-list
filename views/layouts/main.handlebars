@@ -13,6 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
@@ -22,10 +28,15 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-menu is-active">
             <div class="navbar-start">
-              <a class="is-size-3 navbar-item" href="/">The Guest List</a>
+              <a id="home-link" class="is-size-3 navbar-item" href="/">The Guest
+                List</a>
             </div>
             <div class="navbar-end">
-              <button class="px-3 is-size-4 navbar-item btn-no-style">Sign Up</button>
+              <p><a
+                  href="#ex1"
+                  rel="modal:open"
+                  class="px-3 is-size-4 navbar-item"
+                >Sign Up</a></p>
               <button
                 class="px-3 is-size-4 navbar-item btn-no-style"
               >Login</button>
@@ -41,7 +52,59 @@
       <main>
         {{{body}}}
       </main>
+      <div id="ex1" class="modal sign-up">
+        <h1 class="title">Sign Up</h1>
+        <form>
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="First Name" />
+              <span class="icon is-small is-left">
+                <i class="fas fa-regular fa-user"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Last Name" />
+              <span class="icon is-small is-left">
+                <i class="fas fa-regular fa-user"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="Email" />
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="password" placeholder="Password" />
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+        </form>
+        <a href="#" rel="modal:close"></a>
+        <input class="button is-primary" type="submit" value="Submit" />
+      </div>
     </div>
+    <!-- Remember to include jQuery :) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"
+    ></script>
+
+    <!-- jQuery Modal -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
   </body>
 
 </html>
