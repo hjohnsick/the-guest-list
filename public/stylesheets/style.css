@@ -7,15 +7,16 @@ a {
   text-decoration: none;
 }
 
-body {
-  background-color: aqua;
+.home-page-text {
+  background-color: #a4e5e0;
 }
 
 .hero-image {
-  background-image: url("../images/hero-image.jpg");
+  background-image: url("/images/heroimage.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
   position: relative;
 }
 
