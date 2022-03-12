@@ -61,7 +61,6 @@ GuestList.init(
     },
     food_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "food",
         key: "id",

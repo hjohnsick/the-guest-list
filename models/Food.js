@@ -16,15 +16,6 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-
-    guest_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "guestList",
-        key: "id",
-      },
-    },
   },
 
   {
@@ -32,7 +23,7 @@ Food.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "guestList",
+    modelName: "food",
   }
 );
 
