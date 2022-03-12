@@ -1,11 +1,8 @@
-const router = require("./api/userRoutes");
+const router = require("express").Router();
 
 router.get("/", (req, res) => {
   console.log(req.session);
-  res.render("homepage", { loggedIn: req.session.loggedIn }).catch((error) => {
-    console.log(error);
-    res.status(500).json(error);
-  });
+  res.render("homepage", { loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;

@@ -1,0 +1,28 @@
+.wrapper,
+.btn-no-style {
+  font-family: "Sacramento", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: aqua;
+}
+
+.hero-image {
+  background-image: url("../images/hero-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.btn-no-style {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+}
