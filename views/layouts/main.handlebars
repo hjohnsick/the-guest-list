@@ -59,21 +59,21 @@
         <div class="modal-content">
           <div class="box">
             <h1 class="title">Sign Up</h1>
-            <div class="field">
-              <p class="control has-icons-left has-icons-right">
-                <input
-                  id="firstname-signup"
-                  class="input"
-                  type="text"
-                  placeholder="First Name"
-                />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-regular fa-user"></i>
-                </span>
-              </p>
-            </div>
             <!-- bulma signup form-->
             <form id="signup-form">
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input
+                    id="firstname-signup"
+                    class="input"
+                    type="text"
+                    placeholder="First Name"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-regular fa-user"></i>
+                  </span>
+                </p>
+              </div>
               <div class="field">
                 <p class="control has-icons-left has-icons-right">
                   <input
@@ -134,6 +134,59 @@
 
       </div>
       <!-- modal sign up end -->
+      <!-- modal login -->
+      <div id="modal-login" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+          <div class="box">
+            <h1 class="title">Login</h1>
+            <!-- bulma login form-->
+            <form id="login-form">
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input
+                    id="email-login"
+                    class="input"
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input
+                    id="password-login"
+                    class="input"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="control">
+                <button
+                  id="#submit-login"
+                  class="button is-primary"
+                  type="submit"
+                >Submit</button>
+              </div>
+            </form>
+            <!--bulma login form end -->
+          </div>
+        </div>
+        <button
+          id="modal-close"
+          class="modal-close is-large"
+          aria-label="close"
+        ></button>
+      </div>
+      <!-- modal login end -->
     </div>
     <script src="/javascript/index.js"></script>
     <script src="/javascript/signup.js"></script>
