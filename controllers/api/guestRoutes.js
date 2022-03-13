@@ -5,7 +5,7 @@ const { GuestList, Food } = require("../../models");
 router.get("/", (req, res) => {
   GuestList.findAll({
     where: {
-      id: req.session.user_id,
+      user_id: req.session.user_id,
     },
     include: [
       {
