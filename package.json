@@ -27,5 +27,8 @@
     "url": "https://github.com/hjohnsick/the-guest-list/issues"
   },
   "homepage": "https://github.com/hjohnsick/the-guest-list#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
