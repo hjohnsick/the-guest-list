@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, GuestList, Food } = require("../../models");
+const { User } = require("../../models");
 
 // getting all the users
 router.get("/", (req, res) => {
