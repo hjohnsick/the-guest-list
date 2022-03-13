@@ -38,6 +38,7 @@
                 data-target="modal-sign-up"
               >Sign Up</button>
               <button
+                id="login"
                 class="px-3 is-size-4 navbar-item btn-no-style"
               >Login</button>
               <button
@@ -54,7 +55,7 @@
       </main>
       <!-- sign up modal start -->
       <div id="modal-sign-up" class="modal">
-        <div class="modal-background"></div>
+        <div id="modal-background-signup" class="modal-background"></div>
 
         <div class="modal-content">
           <div class="box">
@@ -127,7 +128,7 @@
         </div>
 
         <button
-          id="modal-close"
+          id="modal-close-signup"
           class="modal-close is-large"
           aria-label="close"
         ></button>
@@ -136,7 +137,7 @@
       <!-- modal sign up end -->
       <!-- modal login -->
       <div id="modal-login" class="modal">
-        <div class="modal-background"></div>
+        <div id="modal-background-login" class="modal-background"></div>
 
         <div class="modal-content">
           <div class="box">
@@ -181,7 +182,7 @@
           </div>
         </div>
         <button
-          id="modal-close"
+          id="modal-close-login"
           class="modal-close is-large"
           aria-label="close"
         ></button>
@@ -189,6 +190,7 @@
       <!-- modal login end -->
     </div>
     <script src="/javascript/index.js"></script>
+    <script src="/javascript/login.js"></script>
     <script src="/javascript/signup.js"></script>
   </body>
 
