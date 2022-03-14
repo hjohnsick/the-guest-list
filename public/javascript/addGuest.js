@@ -1,6 +1,6 @@
 async function addGuestFormHandler(event) {
     event.preventDefault();
-  
+    console.log("clicked")
     const first_name = document.querySelector("#firstname-addGuest").value.trim();
     const last_name = document.querySelector("#lastname-addGuest").value.trim();
     const street = document.querySelector("address-addGuest").value.trim();
