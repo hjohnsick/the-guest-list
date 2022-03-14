@@ -1,0 +1,71 @@
+{{#if guests.length}}
+<div> 
+    <table class="table is-striped mt-6 mx-auto has-text-centered">
+        <thead class="is-size-3">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Phone Number
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    RSVP'D
+                </th>
+                <th>
+                    Food Choice
+                </th>
+                <th>
+                    Edit/Delete
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each guests}}
+            <tr>
+                <td>
+                   {{first_name}}
+                   {{last_name}} 
+                </td>
+                <td>
+                    {{street}}
+                    {{city}} 
+                    {{state}} 
+                    {{zipcode}}
+                </td>
+                <td>
+                    {{phone_number}}
+                </td>
+                <td>
+                    {{email}}
+                </td>
+                <td>
+                    {{rsvp}}
+                </td>
+                <td>
+                    {{food.food}}
+                </td>
+                <td>
+                    <i class="fa fa-pencil is-size-3 pr-5" aria-hidden="true"></i>
+              <i class="fa fa-trash is-size-3" aria-hidden="true"></i>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+<div>
+    <p class="has-text-centered is-size-2">
+        No guests to display! <br>
+        Click the "Add Guest" to get started!
+    </p>
+</div>
+{{/if}}
