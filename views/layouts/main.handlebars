@@ -50,6 +50,16 @@
                 class="px-3 is-size-4 navbar-item btn-no-style"
               >Logout
               </button>
+              <!-- if we want to show one of these Login or Logout buttons-->
+              <!-- {{#if loggedIn}}
+                    <button
+                        id="logout"
+                        class="px-3 is-size-4 navbar-item btn-no-style"
+                      >Logout
+                    </button>
+                    {{else}}
+                    <a href="/login">Login</a>
+                  {{/if}} -->
             </div>
           </div>
         </nav>
@@ -301,6 +311,11 @@
     <script src="/javascript/login.js"></script>
     <script src="/javascript/signup.js"></script>
     <script src="/javascript/addGuest.js"></script>
+    <!-- we can add codes to hide Logout button
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+    -->
   </body>
 
 </html>

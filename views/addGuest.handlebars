@@ -104,4 +104,6 @@
         
     </div>
     <!-- modal addGuest end -->
-    <script src="/javascript/addGuest.js"></script>
+    {{#if loggedIn}}
+        <script src="/javascript/addGuest.js"></script>
+    {{/if}}
