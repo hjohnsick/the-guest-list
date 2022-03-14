@@ -44,3 +44,7 @@ body {
   background-color: #a4e5e0;
   font-weight: bold;
 }
+
+tbody, label {
+  font-family: "Fredoka", sans-serif;
+}

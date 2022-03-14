@@ -1,0 +1,107 @@
+<!-- addGuest modal start -->
+<div id="modal-addGuest" class="modal">
+    <div id="modal-background-addGuest" class="modal-background"></div>
+
+        <div class="modal-content">
+          <div class="box">
+                <h1 class="title">Add Guest</h1>
+                <!-- bulma addGuest form-->
+                <form id="addGuest-form">
+                    <div class="field">
+                        <label class="label">What is the guest’s first name?</label>
+                            <div class="control">
+                                <input id="firstname-addGuest" class="input" type="text" placeholder="Text input">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">What is the guest’s last name?</label>
+                        <div class="control">
+                            <input id="lastname-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">What is the guest’s street address?</label>
+                        <div class="control">
+                            <input id="address-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">What is the guest’s city?</label>
+                        <div class="control">
+                            <input id="city-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">What is the guest’s state?</label>
+                        <div class="control">
+                            <input id="state-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">What is the guest’s zipcode?</label>
+                        <div class="control">
+                            <input id="zipcode-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">What is the guest’s e-mail?</label>
+                        <div class="control">
+                            <input id="email-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">What is the guest’s phone number?</label>
+                        <div class="control">
+                            <input id="phonenumber-addGuest" class="input" type="text" placeholder="Text input">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control"> 
+                            <label class="label">Has the guest RSVP'D?</label>
+                            <label class="radio">
+                                <input id="rsvp-addGuest" type="radio" name="Has the guest RSVP’d?">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input id="rsvp-addGuest" type="radio" name="Has the guest RSVP’d?">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Enter a food choice</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="foodchoice-addGuest">
+                                    <option>Select choice</option>
+                                    <option>chicken</option>
+                                    <option>Salmon</option>
+                                    <option>Vegetarian</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <button id="#submit-addGuest" class="button is-primary" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!--bulma addGuest form end -->
+            </div>
+        </div>
+
+        <button
+          id="modal-close-addGuest"
+          class="modal-close is-large"
+          aria-label="close"
+        ></button>
+        
+    </div>
+    <!-- modal addGuest end -->
+    <script src="/javascript/addGuest.js"></script>
