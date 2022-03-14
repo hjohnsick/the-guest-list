@@ -4,9 +4,6 @@ const { GuestList, Food } = require("../../models");
 
 router.get("/", (req, res) => {
   GuestList.findAll({
-    where: {
-      user_id: req.session.user_id,
-    },
     include: [
       {
         model: Food,
@@ -57,7 +54,7 @@ router.post("/", (req, res) => {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     street: req.body.street,
-    city: req.body.street,
+    city: req.body.city,
     state: req.body.state,
     zipcode: req.body.zipcode,
     phone_number: req.body.phone_number,
@@ -79,7 +76,7 @@ router.put("/:id", (req, res) => {
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       street: req.body.street,
-      city: req.body.street,
+      city: req.body.city,
       state: req.body.state,
       zipcode: req.body.zipcode,
       phone_number: req.body.phone_number,
