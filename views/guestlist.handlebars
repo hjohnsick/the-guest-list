@@ -68,4 +68,67 @@
         Click the "Add Guest" to get started!
     </p>
 </div>
+
+       <!--editGuest modal start -->
+    <div id="modal-editGuest" calss="modal">
+        <div id="modal-background-editGuest" class="modal-background"></div>
+
+        <div class="modal-content">
+          <div class="box">
+            <h1 class="title">Edit Guest</h1>
+            <!--bulma editguest form -->
+            <form id="edit-guest">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input
+                            id="firstname-edit"
+                            class="input"
+                            type="text"
+                            placeholder="First Name"/>
+                    <span class="icon is-small  is-left">
+                        <i class="fas fa-regular fa-user"></i>
+                    </span>    
+                    </p> 
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input
+                            id="lastname-edit"
+                            class="input"
+                            type="text"
+                            placeholder="Last Name"/>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-regular fa-user"></i>
+                    </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p>
+                        <input
+                            id="email-edit"
+                            class="input"
+                            type="email"
+                            placeholder="Email"
+                        />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p>
+                        <input
+                        id="address-edit"
+                        class="input"
+                        type="address"
+                        placeholder="Address"/>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-regular fa-user"></i>
+                    </span>
+                    </p>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
 {{/if}}
