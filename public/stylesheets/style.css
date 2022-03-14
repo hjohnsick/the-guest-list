@@ -48,3 +48,7 @@ body {
 tbody, label {
   font-family: "Fredoka", sans-serif;
 }
+
+.fa-pencil, .fa-trash {
+  cursor: pointer;
+}

@@ -10,14 +10,12 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Sacramento&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
@@ -89,7 +87,7 @@
                     placeholder="First Name"
                   />
                   <span class="icon is-small is-left">
-                    <i class="fas fa-regular fa-user"></i>
+                    <i class="fa fa-regular fa-user"></i>
                   </span>
                 </p>
               </div>
@@ -102,7 +100,7 @@
                     placeholder="Last Name"
                   />
                   <span class="icon is-small is-left">
-                    <i class="fas fa-regular fa-user"></i>
+                    <i class="fa fa-regular fa-user"></i>
                   </span>
                 </p>
               </div>
@@ -115,7 +113,7 @@
                     placeholder="Email"
                   />
                   <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fa fa-envelope"></i>
                   </span>
                 </p>
               </div>
@@ -128,7 +126,7 @@
                     placeholder="Password"
                   />
                   <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
+                    <i class="fa fa-lock"></i>
                   </span>
                 </p>
               </div>
@@ -170,7 +168,7 @@
                     placeholder="Email"
                   />
                   <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fa fa-envelope"></i>
                   </span>
                 </p>
               </div>
@@ -183,7 +181,7 @@
                     placeholder="Password"
                   />
                   <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
+                    <i class="fa fa-lock"></i>
                   </span>
                 </p>
               </div>
@@ -316,11 +314,8 @@
     <script src="/javascript/login.js"></script>
     <script src="/javascript/signup.js"></script>
     <script src="/javascript/addGuest.js"></script>
-    <!-- we can add codes to hide Logout button-->
-    {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}
-  
-  </body>
+    <script src="/javascript/logout.js"></script>
+   
+   </body>
 
 </html>
