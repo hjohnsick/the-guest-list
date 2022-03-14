@@ -1,5 +1,5 @@
-INSERT INTO food (id, food_choice)
+INSERT INTO food (id, food)
 VALUES
-    (1, "Chicken")
-    (2, "Salmon")
-    (3, "Vegetarian")
+    (1, "Chicken"),
+    (2, "Salmon"),
+    (3, "Vegetarian");
