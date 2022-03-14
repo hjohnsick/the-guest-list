@@ -10,9 +10,9 @@ async function addGuestFormHandler(event) {
     const email = document.querySelector("email-addGuest").value.trim();
     const phone_number = document.querySelector("phonenumber-addGuest").value.trim();
     const rsvp = document.querySelector("rsvp-addGuest").value.trim();
-    const food_choice = document.querySelector("foodchoice-addGuest").value.trim();
+    //const food_choice = document.querySelector("foodchoice-addGuest").value.trim();
 
-    if (first_name && last_name && email && password) {
+    if (first_name && last_name && street && city && state && zipcode && email && phone_number && rsvp) {
       const response = await fetch("/api/guestlist", {
         method: "post",
         body: JSON.stringify({
@@ -25,8 +25,6 @@ async function addGuestFormHandler(event) {
           email,
           phone_number,
           rsvp,
-          food_choice
-
         }),
         headers: { "Content-Type": "application/json" },
       });
