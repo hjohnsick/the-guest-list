@@ -4,7 +4,7 @@
 A Full stack web application that helps keep track of a users guest list for an event, such as a wedding. It allows the user to input their guests contact information as well their rsvp status and food selection.
 ## Table Of Contents
 * [Installation](#installation)
-* [Usage](#Usage)
+* [Technologies Used](#Technologies Used)
 * [Credits](#Credits)
 * [Contributing](#Contributing)
 * [Questions](#Questions)
@@ -25,7 +25,17 @@ Exit MySQL with exit.
 Ensure that you are in the root project directory, then run npm start.
 The application will be running at localhost:3001/
 
-## Usage
+## Technologies Used
+
+Bulma (Front-end framework)
+Handlebars (Templating engine)
+Heroku (Cloud platform)
+MySQL (RDBMS)
+Node.js (Javascript environment)
+Express (Web framework within Node.js)
+Sequelize (ORM) 
+
+
 
 ## Credits
 Heather Johnsick, Chotan Sharma, Jacqueline Merlan, Nathanael Farver, Benjamin Eidum
