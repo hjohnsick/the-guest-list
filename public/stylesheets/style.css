@@ -45,10 +45,16 @@ body {
   font-weight: bold;
 }
 
-tbody, label {
+tbody,
+label {
   font-family: "Fredoka", sans-serif;
 }
 
-.fa-pencil, .fa-trash {
+.fa-pencil,
+.fa-trash {
   cursor: pointer;
+}
+
+.overflow {
+  overflow-x: auto;
 }
