@@ -10,7 +10,7 @@ A Full stack web application that helps keep track of a users guest list for an 
 * [Questions](#Questions)
 * [License](#license)
 ## Screenshot
-![alt text](./public/images/SC_The_Guest_List.jpg)
+![alt text](./public/images/SC_TGL.png)
 ## Installation
 If you would like the view the site from a user's point of view, you have the option of viewing the site on Heroku. It is located at <"heroku url">.
 
