@@ -16,13 +16,13 @@ If you would like the view the site from a user's point of view, you have the op
 
 If you would like to run the application locally, please ensure that you have the prerequisites installed, then take the following steps:
 
-Clone this repository to your local machine with git clone <repo-url>.\
-Install NPM dependencies by running npm install in the project directory.\
+Clone this repository to your local machine with git `clone <repo-url>.`\
+Install NPM dependencies by running `npm install` in the project directory.\
 If you use a MySQL username other than root or have a MySQL password, open .env and update these values on lines 2 and 3 and add a session name.\
-Log into MySQL CLI with mysql -u root (substitute your username and add -p <your password> if needed).\
-Run CREATE DATABASE the_guest_list_db;\
-Exit MySQL with exit.\
-Ensure that you are in the root project directory, then run npm start.\
+Log into MySQL CLI with `mysql -u root` (substitute your username and add `-p <your password>` if needed).\
+Run `CREATE DATABASE the_guest_list_db;`\
+Exit MySQL with `exit`.\
+Ensure that you are in the root project directory, then `run npm start`.\
 The application will be running at localhost:3001/
 
 ## Technologies Used
