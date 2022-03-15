@@ -4,7 +4,7 @@
 A Full stack web application that helps keep track of a users guest list for an event, such as a wedding. It allows the user to input their guests contact information as well their rsvp status and food selection.
 ## Table Of Contents
 * [Installation](#installation)
-* [Technologies Used](#Technologies Used)
+* [Technologies Used](#Technologies_Used)
 * [Credits](#Credits)
 * [Contributing](#Contributing)
 * [Questions](#Questions)
@@ -27,12 +27,12 @@ The application will be running at localhost:3001/
 
 ## Technologies Used
 
-Bulma (Front-end framework)
-Handlebars (Templating engine)
-Heroku (Cloud platform)
-MySQL (RDBMS)
-Node.js (Javascript environment)
-Express (Web framework within Node.js)
+Bulma (Front-end framework)\
+Handlebars (Templating engine)\
+Heroku (Cloud platform)\
+MySQL (RDBMS)\
+Node.js (Javascript environment)\
+Express (Web framework within Node.js)\
 Sequelize (ORM) 
 
 
