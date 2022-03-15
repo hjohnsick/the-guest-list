@@ -10,16 +10,16 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Sacramento&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.validate.js"></script>
   </head>
 
   <body>
@@ -32,20 +32,29 @@
                 List</a>
             </div>
             <div class="navbar-end">
-              <button
-                id="signup"
+              {{#if loggedIn}}
+                     <button
+                id="addGuest"
                 class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
-                data-target="modal-sign-up"
-              >Sign Up</button>
-              <button
-                id="login"
-                class="px-3 is-size-4 navbar-item btn-no-style"
-              >Login</button>
-              <button
-                id="logout"
-                class="px-3 is-size-4 navbar-item btn-no-style"
-              >Logout
-              </button>
+              >Add Guest</button>
+                    <button
+                        id="logout"
+                        class="px-3 is-size-4 navbar-item btn-no-style"
+                      >Logout
+                    </button>
+
+              {{else}}
+                     <button
+                  id="signup"
+                  class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
+                  data-target="modal-sign-up"
+                >Sign Up</button>
+                    <button
+                        id="login"
+                        class="px-3 is-size-4 navbar-item btn-no-style"
+                        >Login</button> 
+              {{/if}}
+        
             </div>
           </div>
         </nav>
@@ -53,86 +62,20 @@
       <main>
         {{{body}}}
       </main>
-      <!-- sign up modal start -->
-      <div id="modal-sign-up" class="modal">
-        <div id="modal-background-signup" class="modal-background"></div>
+     
+      
+    
+  
 
-        <div class="modal-content">
-          <div class="box">
-            <h1 class="title">Sign Up</h1>
-            <!-- bulma signup form-->
-            <form id="signup-form">
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="firstname-signup"
-                    class="input"
-                    type="text"
-                    placeholder="First Name"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-regular fa-user"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="lastname-signup"
-                    class="input"
-                    type="text"
-                    placeholder="Last Name"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-regular fa-user"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="email-signup"
-                    class="input"
-                    type="email"
-                    placeholder="Email"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input
-                    id="password-signup"
-                    class="input"
-                    type="password"
-                    placeholder="Password"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="control">
-                <button
-                  id="#submit-signup"
-                  class="button is-primary"
-                  type="submit"
-                >Submit</button>
-              </div>
-            </form>
-            <!--bulma sign-up form end -->
-          </div>
+    
 
-        </div>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{else}}
+          <script src="/javascript/login.js"></script>
+    {{/if}}
 
-        <button
-          id="modal-close-signup"
-          class="modal-close is-large"
-          aria-label="close"
-        ></button>
-
+<<<<<<< HEAD
       </div>
       <!-- modal sign up end -->
       <!-- modal login -->
@@ -193,5 +136,9 @@
     <script src="/javascript/login.js"></script>
     <script src="/javascript/signup.js"></script>
   </body>
+=======
+   
+   </body>
+>>>>>>> 30efe1df216393fb7ebdd053469e76144be27fcb
 
 </html>

@@ -4,9 +4,6 @@ const { GuestList, Food } = require("../../models");
 
 router.get("/", (req, res) => {
   GuestList.findAll({
-    where: {
-      user_id: req.session.user_id,
-    },
     include: [
       {
         model: Food,
@@ -53,17 +50,19 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  console.log(req.body);
+  console.log(req.body.food_id);
   GuestList.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     street: req.body.street,
-    city: req.body.street,
+    city: req.body.city,
     state: req.body.state,
     zipcode: req.body.zipcode,
     phone_number: req.body.phone_number,
     email: req.body.email,
     rsvp: req.body.rsvp,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
     food_id: req.body.food_id,
   })
     .then((dbGuestData) => res.json(dbGuestData))
@@ -79,13 +78,13 @@ router.put("/:id", (req, res) => {
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       street: req.body.street,
-      city: req.body.street,
+      city: req.body.city,
       state: req.body.state,
       zipcode: req.body.zipcode,
       phone_number: req.body.phone_number,
       email: req.body.email,
       rsvp: req.body.rsvp,
-      user_id: req.body.user_id,
+      user_id: req.session.user_id,
       food_id: req.body.food_id,
     },
     {

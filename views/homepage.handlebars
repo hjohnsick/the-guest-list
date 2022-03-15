@@ -1,3 +1,147 @@
+<!-- sign up modal start -->
+<div id="modal-sign-up" class="modal">
+  <div id="modal-background-signup" class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <h1 class="title">Sign Up</h1>
+      <!-- bulma signup form-->
+      <form id="signup-form">
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input
+              id="firstname-signup"
+              class="input"
+              type="text"
+              placeholder="First Name"
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-regular fa-user"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input
+              id="lastname-signup"
+              class="input"
+              type="text"
+              placeholder="Last Name"
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-regular fa-user"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input
+              id="email-signup"
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input
+              id="password-signup"
+              class="input"
+              type="password"
+              placeholder="Password"
+              minlength="4"
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="control">
+          <button
+            id="#submit-signup"
+            class="button is-primary"
+            type="submit"
+          >Submit</button>
+        </div>
+      </form>
+      <!--bulma sign-up form end -->
+    </div>
+
+  </div>
+
+  <button
+    id="modal-close-signup"
+    class="modal-close is-large"
+    aria-label="close"
+  ></button>
+
+</div>
+<!-- modal sign up end -->
+<!-- modal login -->
+<div id="modal-login" class="modal">
+  <div id="modal-background-login" class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <h1 class="title">Login</h1>
+      <!-- bulma login form-->
+      <form id="login-form">
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input
+              id="email-login"
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input
+              id="password-login"
+              class="input"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="control">
+          <button
+            id="#submit-login"
+            class="button is-primary"
+            type="submit"
+          >Submit</button>
+        </div>
+      </form>
+      <!--bulma login form end -->
+    </div>
+  </div>
+  <button
+    id="modal-close-login"
+    class="modal-close is-large"
+    aria-label="close"
+  ></button>
+</div>
+<!-- modal login end -->
+
 <div class="hero-image">
 
 </div>
@@ -9,3 +153,7 @@
     <p>We take the guess work out of creating your guest list.</p>
   </section>
 </div>
+
+<script>("#login-form").validate();</script>
+<script>("#signup-form").validate();</script>
+<script src="/javascript/signup.js"></script>
