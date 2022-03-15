@@ -5,7 +5,7 @@ A Full stack web application that helps keep track of a users guest list for an 
 ## Table Of Contents
 * [Installation](#installation)
 * [Usage](#Usage)
-* [Credits](#Credits)gi
+* [Credits](#Credits)
 * [Contributing](#Contributing)
 * [Questions](#Questions)
 * [License](#license)
