@@ -1,8 +1,9 @@
 const router = require('express').Router(); 
 const { GuestList, Food } = require('../models');
+const withAuth = require('../utils/auth');
 
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log(req.session);
    GuestList.findAll({
         where: {
