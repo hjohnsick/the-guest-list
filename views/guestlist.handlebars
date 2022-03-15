@@ -15,6 +15,7 @@
               class="input"
               type="text"
               placeholder="Text input"
+              required
             />
           </div>
         </div>
@@ -26,6 +27,7 @@
               class="input"
               type="text"
               placeholder="Text input"
+              required
             />
           </div>
         </div>
@@ -37,6 +39,7 @@
               class="input"
               type="text"
               placeholder="Text input"
+              required
             />
           </div>
         </div>
@@ -48,6 +51,7 @@
               class="input"
               type="text"
               placeholder="Text input"
+              required
             />
           </div>
         </div>
@@ -59,6 +63,7 @@
               class="input"
               type="text"
               placeholder="Text input"
+              required
             />
           </div>
         </div>
@@ -70,6 +75,8 @@
               class="input"
               type="text"
               placeholder="Text input"
+              minlength="5"
+              required
             />
           </div>
         </div>
@@ -79,7 +86,8 @@
             <input
               id="email-addGuest"
               class="input"
-              type="text"
+              type="email"
+              name="email"
               placeholder="Text input"
             />
           </div>
@@ -106,6 +114,7 @@
                 type="radio"
                 value="1"
                 name="Has the guest RSVP’d?"
+                required
               />
               Yes
             </label>
@@ -115,6 +124,7 @@
                 type="radio"
                 value="0"
                 name="Has the guest RSVP’d?"
+                required
               />
               No
             </label>
@@ -129,7 +139,6 @@
                 <option value="1">Chicken</option>
                 <option value="2">Salmon</option>
                 <option value="3">Vegetarian</option>
-                <option value="4">N/A</option>
               </select>
             </div>
           </div>
@@ -161,7 +170,7 @@
 <!-- modal addGuest end -->
 
 {{#if guests.length}}
-  <div>
+  <div class="overflow">
     <table class="table is-striped mt-6 mx-auto has-text-centered">
       <thead class="is-size-3">
         <tr>
@@ -209,23 +218,14 @@
               {{email}}
             </td>
             <td>
-              {{#if rsvp}}
-                yes
-              {{else}}
-                no
-              {{/if}}
+              {{rsvp}}
             </td>
             <td>
               {{food.food}}
             </td>
             <td>
               <i class="fa fa-pencil is-size-3 pr-5" aria-hidden="true"></i>
-              <i
-                id="{{id}}"
-                class="fa fa-trash is-size-3"
-                onclick="deleteGuestHandler(event)"
-                aria-hidden="true"
-              ></i>
+              <i class="fa fa-trash is-size-3" aria-hidden="true"></i>
             </td>
           </tr>
         {{/each}}
@@ -242,6 +242,6 @@
   </div>
 {{/if}}
 
+<script>("#addGuest-form").validate();</script>
 <script src="/javascript/index.js"></script>
 <script src="/javascript/addGuest.js"></script>
-<script src="/javascript/deleteGuest.js"></script>
