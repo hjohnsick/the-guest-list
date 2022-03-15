@@ -11,8 +11,8 @@ async function editGuestFormHandler(event) {
     const phone_number = document.querySelector("#phonenumber-editGuest").value.trim();
     const rsvp = document.querySelector("#rsvp-editGuest:checked").value.trim();
     const food_id = document.querySelector("#foodchoice-editGuest").value.trim();
-    const guestid = event.target.id;
-    const id = guestid.split("-")[1];
+    const id = event.target.id;
+    
    
     console.log(id)
 

@@ -140,6 +140,7 @@
                 <option value="1">Chicken</option>
                 <option value="2">Salmon</option>
                 <option value="3">Vegetarian</option>
+                <option value="4">N/A</option>
               </select>
             </div>
           </div>
@@ -312,6 +313,7 @@
                 <option value="1">Chicken</option>
                 <option value="2">Salmon</option>
                 <option value="3">Vegetarian</option>
+                <option value="4">N/A</option>
               </select>
             </div>
           </div>
@@ -391,15 +393,20 @@
               {{email}}
             </td>
             <td>
-              {{rsvp}}
+              {{#if rsvp}}
+              Yes
+              {{#else}}
+              No
+              {{/if}}
             </td>
             <td>
               {{food.food}}
             </td>
             <td>
               <i 
-              id="guest-{{id}}" 
-              class="fa fa-pencil is-size-3 pr-5" 
+              id="{{id}}" 
+              class="fa fa-pencil is-size-3 pr-5"
+              onclick="editGuestFormHandler(event)" 
               aria-hidden="true">
               </i>
               <i
@@ -424,7 +431,10 @@
   </div>
 {{/if}}
 
+<script src="/javascript/addGuest.js"></script>
+<script src="/javascript/editguest.js"></script>
+<script src="/javascript/deleteGuest.js"></script>
 <script>("#addGuest-form").validate();</script>
 <script src="/javascript/index.js"></script>
-<script src="/javascript/addGuest.js"></script>
-<script src="/javascript/editGuest.js"></script>
+
+
