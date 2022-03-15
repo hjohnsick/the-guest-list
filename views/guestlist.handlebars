@@ -219,7 +219,12 @@
             </td>
             <td>
               <i class="fa fa-pencil is-size-3 pr-5" aria-hidden="true"></i>
-              <i class="fa fa-trash is-size-3" aria-hidden="true"></i>
+              <i
+                id="{{id}}"
+                class="fa fa-trash is-size-3"
+                onclick="deleteGuestHandler(event)"
+                aria-hidden="true"
+              ></i>
             </td>
           </tr>
         {{/each}}
@@ -238,3 +243,4 @@
 
 <script src="/javascript/index.js"></script>
 <script src="/javascript/addGuest.js"></script>
+<script src="/javascript/deleteGuest.js"></script>
