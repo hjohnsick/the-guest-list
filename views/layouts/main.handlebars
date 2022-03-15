@@ -30,38 +30,29 @@
                 List</a>
             </div>
             <div class="navbar-end">
-              <button
-                id="signup"
-                class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
-                data-target="modal-sign-up"
-              >Sign Up</button>
-              <!-- <button
-                id="login"
-                class="px-3 is-size-4 navbar-item btn-no-style"
-              >Login</button> -->
-              <button
+              {{#if loggedIn}}
+                     <button
                 id="addGuest"
                 class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
               >Add Guest</button>
-             <!-- <button
-                id="logout"
-                class="px-3 is-size-4 navbar-item btn-no-style"
-              >Logout
-              </button> -->
-              <!-- if we want to show one of these Login or Logout buttons-->
-              {{#if loggedIn}}
                     <button
                         id="logout"
                         class="px-3 is-size-4 navbar-item btn-no-style"
                       >Logout
                     </button>
+
               {{else}}
+                     <button
+                  id="signup"
+                  class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
+                  data-target="modal-sign-up"
+                >Sign Up</button>
                     <button
                         id="login"
                         class="px-3 is-size-4 navbar-item btn-no-style"
                         >Login</button> 
               {{/if}}
-              <!-- comment out upto here if don't want-->
+        
             </div>
           </div>
         </nav>
@@ -69,252 +60,19 @@
       <main>
         {{{body}}}
       </main>
-      <!-- sign up modal start -->
-      <div id="modal-sign-up" class="modal">
-        <div id="modal-background-signup" class="modal-background"></div>
-
-        <div class="modal-content">
-          <div class="box">
-            <h1 class="title">Sign Up</h1>
-            <!-- bulma signup form-->
-            <form id="signup-form">
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="firstname-signup"
-                    class="input"
-                    type="text"
-                    placeholder="First Name"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-regular fa-user"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="lastname-signup"
-                    class="input"
-                    type="text"
-                    placeholder="Last Name"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-regular fa-user"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="email-signup"
-                    class="input"
-                    type="email"
-                    placeholder="Email"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-envelope"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input
-                    id="password-signup"
-                    class="input"
-                    type="password"
-                    placeholder="Password"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="control">
-                <button
-                  id="#submit-signup"
-                  class="button is-primary"
-                  type="submit"
-                >Submit</button>
-              </div>
-            </form>
-            <!--bulma sign-up form end -->
-          </div>
-
-        </div>
-
-        <button
-          id="modal-close-signup"
-          class="modal-close is-large"
-          aria-label="close"
-        ></button>
-
-      </div>
-      <!-- modal sign up end -->
-      <!-- modal login -->
-      <div id="modal-login" class="modal">
-        <div id="modal-background-login" class="modal-background"></div>
-        <div class="modal-content">
-          <div class="box">
-            <h1 class="title">Login</h1>
-            <!-- bulma login form-->
-            <form id="login-form">
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input
-                    id="email-login"
-                    class="input"
-                    type="email"
-                    placeholder="Email"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-envelope"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input
-                    id="password-login"
-                    class="input"
-                    type="password"
-                    placeholder="Password"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="control">
-                <button
-                  id="#submit-login"
-                  class="button is-primary"
-                  type="submit"
-                >Submit</button>
-              </div>
-            </form>
-            <!--bulma login form end -->
-          </div>
-        </div>
-        <button
-          id="modal-close-login"
-          class="modal-close is-large"
-          aria-label="close"
-        ></button>
-      </div>
-      <!-- modal login end -->
-      <!-- addGuest modal start -->
-<div id="modal-addGuest" class="modal">
-    <div id="modal-background-addGuest" class="modal-background"></div>
-
-        <div class="modal-content">
-          <div class="box">
-                <h1 class="title">Add Guest</h1>
-                <!-- bulma addGuest form-->
-                <form id="addGuest-form">
-                    <div class="field">
-                        <label class="label">What is the guest’s first name?</label>
-                            <div class="control">
-                                <input id="firstname-addGuest" class="input" type="text" placeholder="Text input">
-                            </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s last name?</label>
-                        <div class="control">
-                            <input id="lastname-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s street address?</label>
-                        <div class="control">
-                            <input id="address-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s city?</label>
-                        <div class="control">
-                            <input id="city-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s state?</label>
-                        <div class="control">
-                            <input id="state-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s zipcode?</label>
-                        <div class="control">
-                            <input id="zipcode-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s e-mail?</label>
-                        <div class="control">
-                            <input id="email-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">What is the guest’s phone number?</label>
-                        <div class="control">
-                            <input id="phonenumber-addGuest" class="input" type="text" placeholder="Text input">
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <div class="control"> 
-                            <label class="label">Has the guest RSVP'D?</label>
-                            <label class="radio">
-                                <input id="rsvp-addGuest" type="radio" name="Has the guest RSVP’d?">
-                                Yes
-                            </label>
-                            <label class="radio">
-                                <input id="rsvp-addGuest" type="radio" name="Has the guest RSVP’d?">
-                                No
-                            </label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Enter a food choice</label>
-                        <div class="control">
-                            <div class="select">
-                                <select id="foodchoice-addGuest">
-                                    <option>Select choice</option>
-                                    <option>chicken</option>
-                                    <option>Salmon</option>
-                                    <option>Vegetarian</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <div class="control">
-                            <button id="#submit-addGuest" class="button is-primary" type="submit">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <!--bulma addGuest form end -->
-            </div>
-        </div>
-
-        <button
-          id="modal-close-addGuest"
-          class="modal-close is-large"
-          aria-label="close"
-        ></button>
-        
-    </div>
-    <!-- modal addGuest end -->
+     
+      
     
-    <script src="/javascript/index.js"></script>
-    <script src="/javascript/login.js"></script>
-    <script src="/javascript/signup.js"></script>
-    <script src="/javascript/addGuest.js"></script>
-    <script src="/javascript/logout.js"></script>
+  
+
+    
+
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{else}}
+          <script src="/javascript/login.js"></script>
+    {{/if}}
+
    
    </body>
 
