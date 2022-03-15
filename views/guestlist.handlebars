@@ -1,183 +1,3 @@
-<<<<<<< HEAD
-{{#if guests.length}}
-<div> 
-    <table class="table is-striped mt-6 mx-auto has-text-centered">
-        <thead class="is-size-3">
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Address
-                </th>
-                <th>
-                    Phone Number
-                </th>
-                <th>
-                    Email
-                </th>
-                <th>
-                    RSVP'D
-                </th>
-                <th>
-                    Food Choice
-                </th>
-                <th>
-                    Edit/Delete
-                </th>
-
-            </tr>
-        </thead>
-        <tbody>
-            {{#each guests}}
-            <tr>
-                <td>
-                   {{first_name}}
-                   {{last_name}} 
-                </td>
-                <td>
-                    {{street}}
-                    {{city}} 
-                    {{state}} 
-                    {{zipcode}}
-                </td>
-                <td>
-                    {{phone_number}}
-                </td>
-                <td>
-                    {{email}}
-                </td>
-                <td>
-                    {{rsvp}}
-                </td>
-                <td>
-                    {{food.food}}
-                </td>
-                <td>
-                    <i class="fa fa-pencil is-size-3 pr-5" aria-hidden="true"></i>
-              <i class="fa fa-trash is-size-3" aria-hidden="true"></i>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
-</div>
-{{else}}
-<div>
-    <p class="has-text-centered is-size-2">
-        No guests to display! <br>
-        Click the "Add Guest" to get started!
-    </p>
-</div>
-
-       <!--editGuest modal start -->
-    <div id="modal-editGuest" calss="modal">
-        <div id="modal-background-editGuest" class="modal-background"></div>
-
-        <div class="modal-content">
-          <div class="box">
-                <h1 class="title">Add Guest</h1>
-                <!-- bulma addGuest form-->
-                <form id="editGuest-form">
-                    <div class="field">
-                        <label class="label">What is the guest’s first name?</label>
-                            <div class="control">
-                                <input id="firstname-editGuest" class="input" type="text" placeholder="First Name">
-                            </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s last name?</label>
-                        <div class="control">
-                            <input id="lastname-editGuest" class="input" type="text" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s street address?</label>
-                        <div class="control">
-                            <input id="address-editGuest" class="input" type="text" placeholder="Address">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s city?</label>
-                        <div class="control">
-                            <input id="city-editGuest" class="input" type="text" placeholder="City">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s state?</label>
-                        <div class="control">
-                            <input id="state-editGuest" class="input" type="text" placeholder="State">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s zipcode?</label>
-                        <div class="control">
-                            <input id="zipcode-editGuest" class="input" type="text" placeholder="Zipcode">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">What is the guest’s e-mail?</label>
-                        <div class="control">
-                            <input id="email-editGuest" class="input" type="text" placeholder="Email">
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">What is the guest’s phone number?</label>
-                        <div class="control">
-                            <input id="phonenumber-editGuest" class="input" type="text" placeholder="Phone Number">
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <div class="control"> 
-                            <label class="label">Has the guest RSVP'D?</label>
-                            <label class="radio">
-                                <input id="rsvp-editGuest" type="radio" value="1" name="Has the guest RSVP’d?">
-                                Yes
-                            </label>
-                            <label class="radio">
-                                <input id="rsvp-editGuest" type="radio" value="0" name="Has the guest RSVP’d?">
-                                No
-                            </label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Enter a food choice</label>
-                        <div class="control">
-                            <div class="select">
-                                <select id="foodchoice-editGuest">
-                                    <option>Select choice</option>
-                                    <option value="1">Chicken</option>
-                                    <option value="2">Salmon</option>
-                                    <option value="3">Vegetarian</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <div class="control">
-                            <button id="#submit-addGuest" class="button is-primary" type="submit">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <!--bulma editGuest form end -->
-            </div>
-        </div>
-
-        <button
-          id="modal-close-editGuest"
-          class="modal-close is-large"
-          aria-label="close"
-        ></button>
-        
-    </div>
-    </div>
-{{/if}}
-=======
 <!-- addGuest modal start -->
 <div id="modal-addGuest" class="modal">
   <div id="modal-background-addGuest" class="modal-background"></div>
@@ -285,6 +105,7 @@
           </div>
         </div>
 
+
         <div class="field">
           <div class="control">
             <label class="label">Has the guest RSVP'D?</label>
@@ -345,9 +166,181 @@
     class="modal-close is-large"
     aria-label="close"
   ></button>
-
 </div>
 <!-- modal addGuest end -->
+
+<!-- modal editGuest start -->
+
+<div id="modal-editGuest" class="modal">
+  <div id="modal-background-editGuest" class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <h1 class="title">Edit Guest</h1>
+      <!-- bulma editGuest form-->
+      <form id="editGuest-form">
+        <div class="field">
+          <label class="label">What is the guest’s first name?</label>
+          <div class="control">
+            <input
+              id="firstname-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">What is the guest’s last name?</label>
+          <div class="control">
+            <input
+              id="lastname-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">What is the guest’s street address?</label>
+          <div class="control">
+            <input
+              id="address-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">What is the guest’s city?</label>
+          <div class="control">
+            <input
+              id="city-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">What is the guest’s state?</label>
+          <div class="control">
+            <input
+              id="state-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">What is the guest’s zipcode?</label>
+          <div class="control">
+            <input
+              id="zipcode-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+              minlength="5"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">What is the guest’s e-mail?</label>
+          <div class="control">
+            <input
+              id="email-editGuest"
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Text input"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">What is the guest’s phone number?</label>
+          <div class="control">
+            <input
+              id="phonenumber-editGuest"
+              class="input"
+              type="text"
+              placeholder="Text input"
+            />
+          </div>
+        </div>
+
+
+        <div class="field">
+          <div class="control">
+            <label class="label">Has the guest RSVP'D?</label>
+            <label class="radio">
+              <input
+                id="rsvp-editGuest"
+                type="radio"
+                value="1"
+                name="Has the guest RSVP’d?"
+                required
+              />
+              Yes
+            </label>
+            <label class="radio">
+              <input
+                id="rsvp-editGuest"
+                type="radio"
+                value="0"
+                name="Has the guest RSVP’d?"
+                required
+              />
+              No
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Enter a food choice</label>
+          <div class="control">
+            <div class="select">
+              <select id="foodchoice-editGuest">
+                <option>Select choice</option>
+                <option value="1">Chicken</option>
+                <option value="2">Salmon</option>
+                <option value="3">Vegetarian</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button
+              id="#submit-editGuest"
+              class="button is-primary"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <!--bulma editGuest form end -->
+    </div>
+  </div>
+
+  <button
+    id="modal-close-addGuest"
+    class="modal-close is-large"
+    aria-label="close"
+  ></button>
+</div>
+
+<!--modal editGuest end-->
 
 {{#if guests.length}}
   <div class="overflow">
@@ -404,8 +397,17 @@
               {{food.food}}
             </td>
             <td>
-              <i class="fa fa-pencil is-size-3 pr-5" aria-hidden="true"></i>
-              <i class="fa fa-trash is-size-3" aria-hidden="true"></i>
+              <i 
+              id="guest-{{id}}" 
+              class="fa fa-pencil is-size-3 pr-5" 
+              aria-hidden="true">
+              </i>
+              <i
+                id="{{id}}"
+                class="fa fa-trash is-size-3"
+                onclick="deleteGuestHandler(event)"
+                aria-hidden="true"
+              ></i>
             </td>
           </tr>
         {{/each}}
@@ -425,4 +427,4 @@
 <script>("#addGuest-form").validate();</script>
 <script src="/javascript/index.js"></script>
 <script src="/javascript/addGuest.js"></script>
->>>>>>> 30efe1df216393fb7ebdd053469e76144be27fcb
+<script src="/javascript/editGuest.js"></script>

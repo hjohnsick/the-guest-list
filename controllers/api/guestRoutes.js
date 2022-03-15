@@ -74,19 +74,7 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
   GuestList.update(
-    {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      street: req.body.street,
-      city: req.body.city,
-      state: req.body.state,
-      zipcode: req.body.zipcode,
-      phone_number: req.body.phone_number,
-      email: req.body.email,
-      rsvp: req.body.rsvp,
-      user_id: req.session.user_id,
-      food_id: req.body.food_id,
-    },
+    req.body,
     {
       where: {
         id: req.params.id,

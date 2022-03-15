@@ -1,4 +1,4 @@
-async function addGuestFormHandler(event) {
+async function editGuestFormHandler(event) {
     event.preventDefault();
     console.log("clicked")
     const first_name = document.querySelector("#firstname-editGuest").value.trim();
@@ -11,10 +11,14 @@ async function addGuestFormHandler(event) {
     const phone_number = document.querySelector("#phonenumber-editGuest").value.trim();
     const rsvp = document.querySelector("#rsvp-editGuest:checked").value.trim();
     const food_id = document.querySelector("#foodchoice-editGuest").value.trim();
+    const guestid = event.target.id;
+    const id = guestid.split("-")[1];
+   
+    console.log(id)
 
     if (first_name && last_name && street && city && state && zipcode && email && phone_number && rsvp) {
-      const response = await fetch("/api/guestlist", {
-        method: "post",
+      const response = await fetch(`/api/guestlist/${id}`, {
+        method: "put",
         body: JSON.stringify({
           first_name,
           last_name,
@@ -39,5 +43,5 @@ async function addGuestFormHandler(event) {
   }
   
   document
-    .querySelector("#addGuest-form")
-    .addEventListener("submit", addGuestFormHandler);
+    .querySelector("#editGuest-form")
+    .addEventListener("submit", editGuestFormHandler);
