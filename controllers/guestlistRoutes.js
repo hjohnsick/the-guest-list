@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
          
      }).then((dbGuestData) => {
          const guests = dbGuestData.map((guest) => guest.get({ plain: true }));
+         console.log(guests);
          res.render("guestlist", { guests, loggedIn: true });
      })
      .catch((error) => {

@@ -45,7 +45,7 @@ body {
   font-weight: bold;
 }
 
-tbody {
+tbody, label {
   font-family: "Fredoka", sans-serif;
 }
 

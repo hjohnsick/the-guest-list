@@ -50,6 +50,8 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  console.log(req.body);
+  console.log(req.body.food_id);
   GuestList.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -60,7 +62,7 @@ router.post("/", (req, res) => {
     phone_number: req.body.phone_number,
     email: req.body.email,
     rsvp: req.body.rsvp,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
     food_id: req.body.food_id,
   })
     .then((dbGuestData) => res.json(dbGuestData))
@@ -82,7 +84,7 @@ router.put("/:id", (req, res) => {
       phone_number: req.body.phone_number,
       email: req.body.email,
       rsvp: req.body.rsvp,
-      user_id: req.body.user_id,
+      user_id: req.session.user_id,
       food_id: req.body.food_id,
     },
     {

@@ -1,3 +1,25 @@
+
+// login modal
+const loginButton = document.querySelector("#login");
+const modalLogin = document.querySelector("#modal-login");
+const modalBgLogin = document.querySelector("#modal-background-login");
+const modalCloseLogin = document.querySelector("#modal-close-login");
+
+// display login modal when login button is clicked
+loginButton.addEventListener("click", () => {
+  modalLogin.classList.add("is-active");
+});
+
+// close login modal when background is clicked
+modalBgLogin.addEventListener("click", () => {
+  modalLogin.classList.remove("is-active");
+});
+
+// close login modal when x is clicked
+modalCloseLogin.addEventListener("click", () => {
+  modalLogin.classList.remove("is-active");
+});
+
 async function loginFormHandler(event) {
   event.preventDefault();
 
