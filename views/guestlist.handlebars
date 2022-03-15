@@ -81,50 +81,50 @@
                     <div class="field">
                         <label class="label">What is the guest’s first name?</label>
                             <div class="control">
-                                <input id="firstname-editGuest" class="input" type="text" placeholder="Text input">
+                                <input id="firstname-editGuest" class="input" type="text" placeholder="First Name">
                             </div>
                     </div>
                     <div class="field">
                         <label class="label">What is the guest’s last name?</label>
                         <div class="control">
-                            <input id="lastname-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="lastname-editGuest" class="input" type="text" placeholder="Last Name">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">What is the guest’s street address?</label>
                         <div class="control">
-                            <input id="address-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="address-editGuest" class="input" type="text" placeholder="Address">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">What is the guest’s city?</label>
                         <div class="control">
-                            <input id="city-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="city-editGuest" class="input" type="text" placeholder="City">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">What is the guest’s state?</label>
                         <div class="control">
-                            <input id="state-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="state-editGuest" class="input" type="text" placeholder="State">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">What is the guest’s zipcode?</label>
                         <div class="control">
-                            <input id="zipcode-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="zipcode-editGuest" class="input" type="text" placeholder="Zipcode">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">What is the guest’s e-mail?</label>
                         <div class="control">
-                            <input id="email-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="email-editGuest" class="input" type="text" placeholder="Email">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">What is the guest’s phone number?</label>
                         <div class="control">
-                            <input id="phonenumber-editGuest" class="input" type="text" placeholder="Text input">
+                            <input id="phonenumber-editGuest" class="input" type="text" placeholder="Phone Number">
                         </div>
                     </div>
 
@@ -132,11 +132,11 @@
                         <div class="control"> 
                             <label class="label">Has the guest RSVP'D?</label>
                             <label class="radio">
-                                <input id="rsvp-editGuest" type="radio" name="Has the guest RSVP’d?">
+                                <input id="rsvp-editGuest" type="radio" value="1" name="Has the guest RSVP’d?">
                                 Yes
                             </label>
                             <label class="radio">
-                                <input id="rsvp-editGuest" type="radio" name="Has the guest RSVP’d?">
+                                <input id="rsvp-editGuest" type="radio" value="0" name="Has the guest RSVP’d?">
                                 No
                             </label>
                         </div>
@@ -147,9 +147,9 @@
                             <div class="select">
                                 <select id="foodchoice-editGuest">
                                     <option>Select choice</option>
-                                    <option id="1">Chicken</option>
-                                    <option id="2">Salmon</option>
-                                    <option id="3">Vegetarian</option>
+                                    <option value="1">Chicken</option>
+                                    <option value="2">Salmon</option>
+                                    <option value="3">Vegetarian</option>
                                 </select>
                             </div>
                         </div>
@@ -163,12 +163,12 @@
                         </div>
                     </div>
                 </form>
-                <!--bulma addGuest form end -->
+                <!--bulma editGuest form end -->
             </div>
         </div>
 
         <button
-          id="modal-close-addGuest"
+          id="modal-close-editGuest"
           class="modal-close is-large"
           aria-label="close"
         ></button>
