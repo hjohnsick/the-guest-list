@@ -32,14 +32,22 @@ function editGuest() {
   modalCloseEditGuest.addEventListener("click", () => {
     modalEditGuest.classList.remove("is-active");
   });
-  //   editGuestFormHandler(event, id);
 }
-//Use the id from the clicked button to open then modal
 
-async function editGuestFormHandler(event, id) {
+//Get id of the clicked button
+function getId(guestId) {
+  id = guestId.getAttribute("data-guestId");
+  const editIcon = document.querySelector(`#guest-${id}`);
+  return editIcon;
+}
+
+async function editGuestFormHandler(event) {
   event.preventDefault();
-  console.log("clicked");
+  console.log("Submit button was clicked");
 
+  //   const clickedId = event.target.id;
+  //   const guestId = clickedId.split("-").pop();
+  const id = getId(this);
   if (
     first_name &&
     last_name &&
