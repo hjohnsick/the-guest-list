@@ -14,7 +14,7 @@ As a user, I want to be able to store my guest’s contact information, whether 
 * [Contributing](#Contributing)
 * [Questions](#Questions)
 * [License](#license)
-## Screenshot
+## Homepage Screenshot
 ![alt text](./public/images/SC_TGL.png)
 ## Installation
 If you would like the view the site from a user's point of view, you have the option of viewing the site on Heroku. It is located at <"heroku url">.
@@ -53,11 +53,13 @@ Eventually we would develop this into an app for smartphones that will auto uplo
 Expand this app to other events besides weddings.
 
 ## Features
-Sign up/
-Login/
-Add Guest/
-Edit Guest/
-
+Sign up - Allows user to input their information to create an account\
+![alt text](./public/images/SC_Signup.png)\
+Login - If user has already created an account, they can log in to thier account\
+Add Guest - Add a guests contact information to add it to the database\
+![alt text](./public/images/SC_AddGuest.png)\
+Edit Guest - If a guest changes their rsvp status, food choice, address or there was a mistake entering information in, this allows the user to edit and update a guests information\
+![alt text](./public/images/EditGuestDisplaying.PNG)
 
 ## Credits
 Heather Johnsick, Chotan Sharma, Jacqueline Merlan, Nathanael Farver, Benjamin Eidum
