@@ -312,7 +312,8 @@
         <div class="field">
           <div class="control">
             <button
-              id="#submit-editGuest"
+              id="submit-editGuest"
+              data-id="id"
               class="button is-primary"
               onclick="editGuestFormHandler(event)"
               type="submit"
@@ -398,7 +399,7 @@
                 id="guest-{{id}}"
                 data-guestId="{{id}}"
                 class="fa fa-pencil is-size-3 pr-5"
-                onclick="editGuest()"
+                onclick="editGuest(event)"
                 aria-hidden="true"
               ></i>
               <i

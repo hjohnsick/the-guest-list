@@ -1,9 +1,10 @@
 //Get id of the clicked button
-function editGuest() {
+function editGuest(event) {
   //   id = guestId.getAttribute("data-guestId");
   //   const editIcon = document.querySelector(`#guest-${id}`);
   //   console.log(id);
   //   console.log(editIcon);
+  document.querySelector('#submit-editGuest').dataset.id = event.target.dataset.guestId
   const modalEditGuest = document.querySelector("#modal-editGuest");
   modalEditGuest.classList.add("is-active");
   console.log("buttonClicked");
@@ -20,19 +21,26 @@ function editGuest() {
     modalEditGuest.classList.remove("is-active");
   });
 }
+// let guestid = "";
+// $(document).on('click', '#submit-editGuest', function(){
+//   guestid=$(this).data('id')
+//   console.log(guestid, "test");
+// })
 
 //Get id of the clicked button
-function getId(guestId) {
-  console.log(guestId);
-  id = guestId.getAttribute("data-guestId");
-  const editIcon = document.querySelector(`#guest-${id}`);
-  return editIcon;
-}
+// function getId(guestId) {
+//   console.log(guestId);
+//   //id = guestId.getAttribute("data-guestId")
+//   id = document.querySelector("#submit-editGuest").data('id')
+//   const editIcon = document.querySelector(`#guest-${id}`);
+//   return editIcon;
+//}
 
 async function editGuestFormHandler(event) {
   event.preventDefault();
   console.log("Submit button was clicked");
-
+let guestid=document.querySelector("#submit-editGuest").dataset.id;
+console.log(guestid)
   const first_name = document
     .querySelector("#firstname-editGuest")
     .value.trim();
@@ -51,9 +59,9 @@ async function editGuestFormHandler(event) {
   const food_id = document.querySelector("#foodchoice-editGuest").value;
   //   const clickedId = event.target.id;
   //   const guestId = clickedId.split("-").pop();
-  const guestId = getId(event.target.id);
+  //const guestId = getId(event.target.id);
   //   const id = 1;
-  const response = await fetch(`/api/guestList/${guestId}`, {
+  const response = await fetch(`/api/guestList/${guestid}`, {
     method: "PUT",
     body: JSON.stringify({
       first_name,
