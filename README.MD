@@ -1,7 +1,7 @@
 # The Guest List
 
 ## Description
-The Guest List is a full stack application that allows a user to signup, login, and add guests to their wedding guest list.\  
+The Guest List is a full stack application that allows a user to signup, login, and add guests to their wedding guest list.  
 
 As a user, I want to be able to store my guest’s contact information, whether they have rsvp’d or not, and what food choice they have selected.  I also want to be able to edit their information and delete their information.
 
