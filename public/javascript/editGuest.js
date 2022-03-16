@@ -10,8 +10,7 @@ const phone_number = document
   .value.trim();
 const rsvp = document.querySelector("#rsvp-editGuest:checked").value.trim();
 const food_id = document.querySelector("#foodchoice-editGuest").value.trim();
-
-const modalEditGuest = document.querySelector(".modal-editGuest").value.trim();
+const modalEditGuest = document.querySelector("#modal-editGuest");
 const modalBgEditGuest = document.querySelector("#modal-background-editGuest");
 const modalCloseEditGuest = document.querySelector("#modal-close-editGuest");
 // close editGuest modal when editGuest background is clicked
@@ -24,13 +23,19 @@ modalCloseEditGuest.addEventListener("click", () => {
 });
 
 //Get id of the clicked button
-function getIdOfClickedButton(guestId) {
-  const id = guestId.getAttribute("data-guestId");
-  return id;
+function editGuest() {
+  //   id = guestId.getAttribute("data-guestId");
+  //   const editIcon = document.querySelector(`#guest-${id}`);
+  //   console.log(id);
+  //   console.log(editIcon);
+  const modalEditGuest = document.querySelector("#modal-editGuest");
+  modalEditGuest.classList.add("is-active");
+  console.log("buttonClicked");
+  //   editGuestFormHandler(event, id);
 }
 //Use the id from the clicked button to open then modal
 
-async function editGuestFormHandler(event) {
+async function editGuestFormHandler(event, id) {
   event.preventDefault();
   console.log("clicked");
 
