@@ -48,39 +48,28 @@ async function editGuestFormHandler(event) {
   //   const clickedId = event.target.id;
   //   const guestId = clickedId.split("-").pop();
   const id = getId(this);
-  if (
-    first_name &&
-    last_name &&
-    street &&
-    city &&
-    state &&
-    zipcode &&
-    email &&
-    phone_number &&
-    rsvp
-  ) {
-    const response = await fetch(`/api/guestlist/${id}`, {
-      method: "PUT",
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        street,
-        city,
-        state,
-        zipcode,
-        email,
-        phone_number,
-        rsvp,
-        food_id,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
 
-    if (response.ok) {
-      document.location.replace("/theguestlist");
-    } else {
-      alert(response.statusText);
-    }
+  const response = await fetch(`/api/guestlist/${id}`, {
+    method: "PUT",
+    body: JSON.stringify({
+      first_name,
+      last_name,
+      street,
+      city,
+      state,
+      zipcode,
+      email,
+      phone_number,
+      rsvp,
+      food_id,
+    }),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.ok) {
+    document.location.replace("/theguestlist");
+  } else {
+    alert(response.statusText);
   }
 }
 
