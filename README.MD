@@ -18,7 +18,12 @@ If you would like to run the application locally, please ensure that you have th
 
 Clone this repository to your local machine with git `clone <repo-url>.`\
 Install NPM dependencies by running `npm install` in the project directory.\
-If you use a MySQL username other than root or have a MySQL password, open .env and update these values on lines 2 and 3 and add a session name.\
+Create and .env file that includes
+`DB_NAME='the_guest_list_db'\
+DB_USER='root'\
+DB_PW='<Your SQL Password>'\
+SESSION='<Anything you'd like to name>'`\
+If you use a MySQL username other than root or have a MySQL password, and update lines 2 and 3.\
 Log into MySQL CLI with `mysql -u root` (substitute your username and add `-p <your password>` if needed).\
 Run `CREATE DATABASE the_guest_list_db;`\
 Exit MySQL with `exit`.\
