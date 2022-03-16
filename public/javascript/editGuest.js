@@ -10,17 +10,6 @@ const phone_number = document
   .value.trim();
 const rsvp = document.querySelector("#rsvp-editGuest:checked").value.trim();
 const food_id = document.querySelector("#foodchoice-editGuest").value.trim();
-const modalEditGuest = document.querySelector("#modal-editGuest");
-const modalBgEditGuest = document.querySelector("#modal-background-editGuest");
-const modalCloseEditGuest = document.querySelector("#modal-close-editGuest");
-// close editGuest modal when editGuest background is clicked
-modalBgEditGuest.addEventListener("click", () => {
-  modalEditGuest.classList.remove("is-active");
-});
-// close editGuest modal when x is clicked
-modalCloseEditGuest.addEventListener("click", () => {
-  modalEditGuest.classList.remove("is-active");
-});
 
 //Get id of the clicked button
 function editGuest() {
@@ -31,6 +20,18 @@ function editGuest() {
   const modalEditGuest = document.querySelector("#modal-editGuest");
   modalEditGuest.classList.add("is-active");
   console.log("buttonClicked");
+  const modalBgEditGuest = document.querySelector(
+    "#modal-background-editGuest"
+  );
+  const modalCloseEditGuest = document.querySelector("#modal-close-editGuest");
+  // close editGuest modal when editGuest background is clicked
+  modalBgEditGuest.addEventListener("click", () => {
+    modalEditGuest.classList.remove("is-active");
+  });
+  // close editGuest modal when x is clicked
+  modalCloseEditGuest.addEventListener("click", () => {
+    modalEditGuest.classList.remove("is-active");
+  });
   //   editGuestFormHandler(event, id);
 }
 //Use the id from the clicked button to open then modal
