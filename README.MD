@@ -18,7 +18,7 @@ If you would like to run the application locally, please ensure that you have th
 
 Clone this repository to your local machine with git `clone <repo-url>.`\
 Install NPM dependencies by running `npm install` in the project directory.\
-Create and .env file that includes
+Create and .env file that includes:\
 `DB_NAME='the_guest_list_db'`\
 `DB_USER='root'`\
 `DB_PW='<Your SQL Password>'`\
