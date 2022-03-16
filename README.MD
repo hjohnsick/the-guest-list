@@ -1,10 +1,15 @@
 # The Guest List
 
 ## Description
-A Full stack web application that helps keep track of a users guest list for an event, such as a wedding. It allows the user to input their guests contact information as well their rsvp status and food selection.
+The Guest List is a full stack application that allows a user to signup, login, and add guests to their wedding guest list.\  
+
+As a user, I want to be able to store my guest’s contact information, whether they have rsvp’d or not, and what food choice they have selected.  I also want to be able to edit their information and delete their information.
+
 ## Table Of Contents
 * [Installation](#installation)
 * [Technologies Used](#Technologies_Used)
+* [Future Development](#Future_Development)
+* [Features](#Features)
 * [Credits](#Credits)
 * [Contributing](#Contributing)
 * [Questions](#Questions)
@@ -25,7 +30,7 @@ Create and .env file that includes:\
 `SESSION='<Anything you'd like to name>'`\
 If you use a MySQL username other than root or have a MySQL password, and update lines 2 and 3.\
 Log into MySQL CLI with `mysql -u root` (substitute your username and add `-p <your password>` if needed).\
-Run `CREATE DATABASE the_guest_list_db;`\
+Run `schema.sql;`\
 Exit MySQL with `exit`.\
 Ensure that you are in the root project directory, then `run npm start`.\
 The application will be running at localhost:3001/
@@ -38,8 +43,20 @@ Heroku (Cloud platform)\
 MySQL (RDBMS)\
 Node.js (Javascript environment)\
 Express (Web framework within Node.js)\
-Sequelize (ORM) 
+Sequelize (ORM)\
+JQuery Validation Plugin
 
+## Future Development
+Add a customizable seating chart  and table numbers to the guest list.\
+Add a section on the app that allows guests to share their photos  from their personal devices.\
+Eventually we would develop this into an app for smartphones that will auto upload the photos taken from the wedding/event.\
+Expand this app to other events besides weddings.
+
+## Features
+Sign up/
+Login/
+Add Guest/
+Edit Guest/
 
 
 ## Credits
