@@ -32,7 +32,7 @@ If you use a MySQL username other than root or have a MySQL password, and update
 Log into MySQL CLI with `mysql -u root` (substitute your username and add `-p <your password>` if needed).\
 Run `schema.sql;`\
 Exit MySQL with `exit`.\
-Ensure that you are in the root project directory, then `run npm start`.\
+Ensure that you are in the root project directory, then run `npm start`.\
 The application will be running at localhost:3001/
 
 ## Technologies Used
