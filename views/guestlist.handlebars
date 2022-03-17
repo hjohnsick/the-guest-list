@@ -8,7 +8,7 @@
       <!-- bulma addGuest form-->
       <form id="addGuest-form">
         <div class="field">
-          <label class="label">What is the guest's first name?</label>
+          <label class="label">What is the guest’s first name?</label>
           <div class="control">
             <input
               id="firstname-addGuest"
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's last name?</label>
+          <label class="label">What is the guest’s last name?</label>
           <div class="control">
             <input
               id="lastname-addGuest"
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's street address?</label>
+          <label class="label">What is the guest’s street address?</label>
           <div class="control">
             <input
               id="address-addGuest"
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's city?</label>
+          <label class="label">What is the guest’s city?</label>
           <div class="control">
             <input
               id="city-addGuest"
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's state?</label>
+          <label class="label">What is the guest’s state?</label>
           <div class="control">
             <input
               id="state-addGuest"
@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's zipcode?</label>
+          <label class="label">What is the guest’s zipcode?</label>
           <div class="control">
             <input
               id="zipcode-addGuest"
@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's e-mail?</label>
+          <label class="label">What is the guest’s e-mail?</label>
           <div class="control">
             <input
               id="email-addGuest"
@@ -94,7 +94,7 @@
         </div>
 
         <div class="field">
-          <label class="label">What is the guest's phone number?</label>
+          <label class="label">What is the guest’s phone number?</label>
           <div class="control">
             <input
               id="phonenumber-addGuest"
@@ -113,7 +113,7 @@
                 id="rsvp-addGuest"
                 type="radio"
                 value="1"
-                name="Has the guest RSVP'd?"
+                name="Has the guest RSVP’d?"
                 required
               />
               Yes
@@ -123,7 +123,7 @@
                 id="rsvp-addGuest"
                 type="radio"
                 value="0"
-                name="Has the guest RSVP'd?"
+                name="Has the guest RSVP’d?"
                 required
               />
               No
@@ -181,7 +181,8 @@
       <!-- bulma editGuest form-->
       <form id="editGuest-form">
         <div class="field">
-          <label class="label">What is the guest's first name?</label>
+          <input type="hidden" id="guest-id" value={{id}} />
+          <label class="label">What is the guest’s first name?</label>
           <div class="control">
             <input
               id="firstname-editGuest"
@@ -192,7 +193,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's last name?</label>
+          <label class="label">What is the guest’s last name?</label>
           <div class="control">
             <input
               id="lastname-editGuest"
@@ -203,7 +204,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's street address?</label>
+          <label class="label">What is the guest’s street address?</label>
           <div class="control">
             <input
               id="address-editGuest"
@@ -214,7 +215,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's city?</label>
+          <label class="label">What is the guest’s city?</label>
           <div class="control">
             <input
               id="city-editGuest"
@@ -225,7 +226,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's state?</label>
+          <label class="label">What is the guest’s state?</label>
           <div class="control">
             <input
               id="state-editGuest"
@@ -236,7 +237,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's zipcode?</label>
+          <label class="label">What is the guest’s zipcode?</label>
           <div class="control">
             <input
               id="zipcode-editGuest"
@@ -247,7 +248,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">What is the guest's e-mail?</label>
+          <label class="label">What is the guest’s e-mail?</label>
           <div class="control">
             <input
               id="email-editGuest"
@@ -260,7 +261,7 @@
         </div>
 
         <div class="field">
-          <label class="label">What is the guest's phone number?</label>
+          <label class="label">What is the guest’s phone number?</label>
           <div class="control">
             <input
               id="phonenumber-editGuest"
@@ -279,7 +280,7 @@
                 id="rsvp-editGuest"
                 type="radio"
                 value="1"
-                name="Has the guest RSVP'd?"
+                name="Has the guest RSVP’d?"
               />
               Yes
             </label>
@@ -288,7 +289,7 @@
                 id="rsvp-editGuest"
                 type="radio"
                 value="0"
-                name="Has the guest RSVP'd?"
+                name="Has the guest RSVP’d?"
               />
               No
             </label>
@@ -312,8 +313,7 @@
         <div class="field">
           <div class="control">
             <button
-              id="submit-editGuest"
-              data-id="id"
+              id="#submit-editGuest"
               class="button is-primary"
               onclick="editGuestFormHandler(event)"
               type="submit"
@@ -401,6 +401,15 @@
                 class="fa fa-pencil is-size-3 pr-5"
                 onclick="editGuest(event)"
                 aria-hidden="true"
+                data-firstName="{{first_name}}"
+                data-lastName="{{last_name}}"
+                data-street="{{street}}"
+                data-city="{{city}}"
+                data-state="{{state}}"
+                data-zipcode="{{zipcode}}"
+                data-phoneNumber="{{phone_number}}"
+                data-email="{{email}}"
+                data-food="{{food.food}}"
               ></i>
               <i
                 id="{{id}}"
