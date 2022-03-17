@@ -1,12 +1,30 @@
-//Get id of the clicked button
-function editGuest() {
-  //   id = guestId.getAttribute("data-guestId");
-  //   const editIcon = document.querySelector(`#guest-${id}`);
-  //   console.log(id);
-  //   console.log(editIcon);
+function editGuest(event) {
   const modalEditGuest = document.querySelector("#modal-editGuest");
   modalEditGuest.classList.add("is-active");
-  console.log("buttonClicked");
+  document.getElementById("firstname-editGuest").value =
+    event.target.getAttribute("data-firstName");
+  document.getElementById("lastname-editGuest").value =
+    event.target.getAttribute("data-lastName");
+  document.getElementById("address-editGuest").value =
+    event.target.getAttribute("data-street");
+  document.getElementById("city-editGuest").value =
+    event.target.getAttribute("data-city");
+  document.getElementById("state-editGuest").value =
+    event.target.getAttribute("data-state");
+  document.getElementById("guest-id").value =
+    event.target.getAttribute("data-guestId");
+  document.getElementById("state-editGuest").value =
+    event.target.getAttribute("data-state");
+  document.getElementById("zipcode-editGuest").value =
+    event.target.getAttribute("data-zipcode");
+  document.getElementById("phonenumber-editGuest").value =
+    event.target.getAttribute("data-phoneNumber");
+  document.getElementById("email-editGuest").value =
+    event.target.getAttribute("data-email");
+  document.getElementById("rsvp-editGuest").value =
+    event.target.getAttribute("data-rvsp");
+  document.getElementById("foodchoice-editGuest").value =
+    event.target.getAttribute("data-food");
   const modalBgEditGuest = document.querySelector(
     "#modal-background-editGuest"
   );
@@ -21,17 +39,10 @@ function editGuest() {
   });
 }
 
-//Get id of the clicked button
-function getId(guestId) {
-  id = guestId.getAttribute("data-guestId");
-  const editIcon = document.querySelector(`#guest-${id}`);
-  return editIcon;
-}
-
 async function editGuestFormHandler(event) {
   event.preventDefault();
   console.log("Submit button was clicked");
-
+  console.log(event);
   const first_name = document
     .querySelector("#firstname-editGuest")
     .value.trim();
@@ -44,16 +55,13 @@ async function editGuestFormHandler(event) {
   const phone_number = document
     .querySelector("#phonenumber-editGuest")
     .value.trim();
-  //   const rsvp = document.querySelector("#rsvp-editGuest:checked").value;
   const rsvp = document.querySelector(
     'input[name="Has the guest RSVP’d?"]:checked'
   )?.value;
   const food_id = document.querySelector("#foodchoice-editGuest").value;
-  //   const clickedId = event.target.id;
-  //   const guestId = clickedId.split("-").pop();
-  //   const id = getId(this);
-  const id = 1;
-  const response = await fetch(`/api/guestList/${id}`, {
+  const guestId = document.getElementById("guest-id").value;
+  console.log(guestId);
+  const response = await fetch(`/api/guestList/${guestId}`, {
     method: "PUT",
     body: JSON.stringify({
       first_name,

@@ -181,6 +181,7 @@
       <!-- bulma editGuest form-->
       <form id="editGuest-form">
         <div class="field">
+          <input type="hidden" id="guest-id" value={{id}} />
           <label class="label">What is the guest’s first name?</label>
           <div class="control">
             <input
@@ -398,8 +399,18 @@
                 id="guest-{{id}}"
                 data-guestId="{{id}}"
                 class="fa fa-pencil is-size-3 pr-5"
-                onclick="editGuest()"
+                onclick="editGuest(event)"
                 aria-hidden="true"
+                data-firstName="{{first_name}}"
+                data-lastName="{{last_name}}"
+                data-street="{{street}}"
+                data-city="{{city}}"
+                data-state="{{state}}"
+                data-zipcode="{{zipcode}}"
+                data-phoneNumber="{{phone_number}}"
+                data-email="{{email}}"
+                data-rvsp="{{rsvp}}"
+                data-food="{{food.food}}"
               ></i>
               <i
                 id="{{id}}"
