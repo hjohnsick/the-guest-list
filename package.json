@@ -16,6 +16,9 @@
     "express": "^4.17.3",
     "express-handlebars": "^6.0.3",
     "express-session": "^1.17.2",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
   },
@@ -27,5 +30,8 @@
     "url": "https://github.com/hjohnsick/the-guest-list/issues"
   },
   "homepage": "https://github.com/hjohnsick/the-guest-list#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
