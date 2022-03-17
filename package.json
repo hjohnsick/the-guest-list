@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "develop": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +18,6 @@
     "express-handlebars": "^6.0.3",
     "express-session": "^1.17.2",
     "jquery": "^3.6.0",
-    "moment": "^2.29.1",
-    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
   },
