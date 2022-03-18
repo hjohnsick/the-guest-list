@@ -13,9 +13,6 @@ As a user, I want to be able to store my guest’s contact information, whether 
 - [Future Development](#Future_Development)
 - [Features](#Features)
 - [Credits](#Credits)
-- [Contributing](#Contributing)
-- [Questions](#Questions)
-- [License](#license)
 
 ## Homepage Screenshot
 
@@ -74,7 +71,3 @@ Edit Guest - If a guest changes their rsvp status, food choice, address or there
 ## Credits
 
 Heather Johnsick, Chotan Sharma, Jacqueline Merlan, Nathanael Farver, Benjamin Eidum
-
-## Contributing
-
-## Questions
