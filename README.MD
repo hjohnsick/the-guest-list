@@ -59,9 +59,9 @@ Login - If user has already created an account, they can log in to thier account
 Add Guest - Add a guests contact information to add it to the database\
 ![alt text](./public/images/SC_AddGuest.png)\
 Display all guests - Allows User to see all of their guests information\
-![alt text](./public/images/ShowAllGuests.PNG)\
+![alt text](./public/images/ShowAllGuests.png)\
 Edit Guest - If a guest changes their rsvp status, food choice, address or there was a mistake entering information in, this allows the user to edit and update a guests information\
-![alt text](./public/images/EditGuestDisplaying.PNG)
+![alt text](./public/images/EditGuestDisplaying.png)
 
 ## Credits
 Heather Johnsick, Chotan Sharma, Jacqueline Merlan, Nathanael Farver, Benjamin Eidum
