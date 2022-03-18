@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Guest List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.validate.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-menu is-active">
+            <div class="navbar-start">
+              <a id="home-link" class="is-size-3 navbar-item" href="/">The Guest
+                List</a>
+            </div>
+            <div class="navbar-end">
+              {{#if loggedIn}}
+                     <button
+                id="addGuest"
+                class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
+              >Add Guest</button>
+                    <button
+                        id="logout"
+                        class="px-3 is-size-4 navbar-item btn-no-style"
+                      >Logout
+                    </button>
+
+              {{else}}
+                     <button
+                  id="signup"
+                  class="px-3 is-size-4 navbar-item js-modal-trigger btn-no-style"
+                  data-target="modal-sign-up"
+                >Sign Up</button>
+                    <button
+                        id="login"
+                        class="px-3 is-size-4 navbar-item btn-no-style"
+                        >Login</button> 
+              {{/if}}
+        
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+     
+      
+    
+  
+
+    
+
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{else}}
+          <script src="/javascript/login.js"></script>
+    {{/if}}
+
+   
+   </body>
+
+</html>

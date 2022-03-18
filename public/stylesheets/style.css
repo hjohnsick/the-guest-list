@@ -1,0 +1,60 @@
+.wrapper,
+.title,
+.btn-no-style {
+  font-family: "Sacramento", cursive;
+}
+
+#modal-close {
+  top: 10px;
+  right: 10px;
+}
+
+a.navbar-item:hover {
+  background-color: #a4e5e0;
+  font-weight: bold;
+}
+
+#home-link {
+  text-decoration: none;
+}
+
+body {
+  background-color: #a4e5e0;
+}
+
+.hero-image {
+  background-image: url("/images/heroimage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.btn-no-style {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  background-color: #ffffff;
+}
+
+.btn-no-style:hover {
+  background-color: #a4e5e0;
+  font-weight: bold;
+}
+
+tbody,
+label {
+  font-family: "Fredoka", sans-serif;
+}
+
+.fa-pencil,
+.fa-trash {
+  cursor: pointer;
+}
+
+.overflow {
+  overflow-x: auto;
+}
