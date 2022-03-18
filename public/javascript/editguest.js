@@ -21,8 +21,6 @@ function editGuest(event) {
     event.target.getAttribute("data-phoneNumber");
   document.getElementById("email-editGuest").value =
     event.target.getAttribute("data-email");
-  //   document.getElementById("rsvp-editGuest").value =
-  //     event.target.getAttribute("data-rvsp");
   document.getElementById("foodchoice-editGuest").value =
     event.target.getAttribute("data-food");
   const modalBgEditGuest = document.querySelector(
